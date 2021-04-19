@@ -2,9 +2,9 @@
 
 nav ul {
     list-style-type: none;
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
-    background-color: #333;
+    /* background-color: #333; */
     width: 100%;
     height: auto;
     position: sticky;
@@ -20,10 +20,12 @@ nav ul li a {
     text-decoration: none;
     float: left;
     padding: 15px;
+    border-radius: 25px;
+    padding: 12px;
 }
 
 nav ul li a.active {
-    background-color: #4CAF50;
+    background-color: limegreen;
     color: white;
 }
 
@@ -43,6 +45,7 @@ nav ul li a:hover:not(.active) {
 /* Styles for navigation bar ends here */
 
 body {
+    height: 100%;
     margin: 0;
 }
 
@@ -59,4 +62,15 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("../images/img3.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
