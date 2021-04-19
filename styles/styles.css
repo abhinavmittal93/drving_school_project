@@ -45,3 +45,18 @@ nav ul li a:hover:not(.active) {
 body {
     margin: 0;
 }
+
+.align-center {
+    text-align: center;
+}
+
+.square_list_type {
+    list-style-type: square;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}

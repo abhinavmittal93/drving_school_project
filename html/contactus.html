@@ -3,15 +3,12 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Pluto Driving School</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <!-- Use the header area for the website name or logo -->
-    <header>
-    </header>
 
     <!-- Use the nav area to add hyperlinks to other pages within the website -->
     <nav>
@@ -23,15 +20,34 @@
         </ul>
     </nav>
 
+    <!-- Use the header area for the website name or logo -->
+    <header class="align-center">
+        <h2>Contact Us</h2>
+    </header>
+
     <!-- Use the main area to add the main content of the webpage -->
     <main>
 
-        <p></p>
+        <div class="align-center">
+            <form>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" required>
+
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" required>
+                <br><br>
+
+                <label for="email">Email name:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
 
     </main>
 
     <!-- Use the footer area to add webpage footer content -->
     <footer>
+        <hr> &copy; Copyright 2021, Pluto Driving School
     </footer>
 
 </body>
