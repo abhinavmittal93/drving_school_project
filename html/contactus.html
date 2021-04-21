@@ -6,6 +6,49 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('../images/img5.jpg');
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        footer {
+            color: white;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+        
+        .outer_column {
+            background: linear-gradient(45deg, lightgrey, transparent);
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -21,28 +64,58 @@
     </nav>
 
     <!-- Use the header area for the website name or logo -->
-    <header class="align-center">
-        <h2>Contact Us</h2>
+    <header class="align-center" style="color: white;">
+        <h1>Contact Us</h1>
     </header>
 
     <!-- Use the main area to add the main content of the webpage -->
     <main>
-
-        <div class="align-center">
-            <form>
-                <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname" required>
-
-                <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname" required>
-                <br><br>
-
-                <label for="email">Email name:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Submit</button>
-            </form>
+        <div class="row">
+            <div class="column outer_column">
+                <h2>Address to reach Us:</h2>
+                <p>Some map goes here.</p>
+            </div>
+            <div class="column outer_column">
+                <form>
+                    <fieldset>
+                        <legend><b>Personalia:</b></legend>
+                        <div class="row">
+                            <span class="column">
+                              <label for="fname">First name:</label><br>
+                              <input type="text" id="fname" name="fname" required>
+                            </span>
+                            <span class="column">
+                              <label for="lname">Last name:</label><br>
+                              <input type="text" id="lname" name="lname">
+                            </span>
+                            <span class="column">
+                              <label for="email">Email:</label><br>
+                              <input type="email" id="email" name="email" required>
+                            </span>
+                            <span class="column">
+                              <label for="contact">Contact number:</label><br>
+                              <input type="tel" id="contact" name="contact" maxlength="11">
+                            </span>
+                            <span style="padding: 10px;">
+                              <label for="query">Message:</label><br>
+                              <textarea style="margin-left: 10px; width: 82%;" rows="3" cols="23" required></textarea>
+                            </span>
+                            <span class="column">
+                              <input class="btn" type="reset" value="Reset">
+                              <input class="btn" type="submit" value="Submit">
+                            </span>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
         </div>
-
+        <div class="align-center" style="color: white;">
+            <h2><span title="Working Hours">&#128337;</span><b> 8:00 AM to 6:00 PM (Business Days)</b></h2>
+            <h3><span title="Phone">&#9742;</span><b> <a style="color: white;text-decoration: none;" href="tel:+14372193341">+1(437) 219-3341</a></b></h3>
+            <h3><span title="Email">&#128231;</span><b> <a style="color: white;text-decoration: none;" href="mailto:abhinavmittal93@gmail.com">abhinavmittal93@gmail.com</a></b></h3>
+            &nbsp;
+        </div>
+        </div>
     </main>
 
     <!-- Use the footer area to add webpage footer content -->

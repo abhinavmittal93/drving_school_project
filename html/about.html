@@ -3,104 +3,130 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>About Us</title>
+    <title>About us</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        #help_students_heading {
-            text-align: center;
+        .heading {
+            font-family: cursive, times, "Times New Roman", "times-roman", georgia, serif;
+            color: #ad3e3e;
+            margin: 0;
+            padding: 0px 0px 6px 0px;
+            font-size: 51px;
+            line-height: 44px;
+            letter-spacing: -2px;
+            font-weight: bold;
+        }
+        
+        footer {
+            color: white;
+        }
+        
+        #list1 {
+            color: #ceab00;
+            font-family: cursive, -webkit-pictograph;
+            list-style: none;
+            font-size: 30px;
+        }
+        
+        #issues_list {
+            color: #6de08b;
+        }
+        
+        #issues_list dt {
+            font-size: xx-large;
+        }
+        
+        #issues_list dd {
+            font-size: 18px;
+        }
+        
+        .round-border-list {
+            border: 2px solid red;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 25px;
+            display: flow-root;
+            font-family: sans-serif, "Times New Roman", Times;
         }
     </style>
+
+
 </head>
 
-<body>
-    <!-- Use the nav area to add hyperlinks to other pages within the website -->
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a class="active" href="about.html">About Us</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li><a href="services.html">Services</a></li>
-        </ul>
-    </nav>
+<body class="bg2">
+    <div style="background: linear-gradient( 45deg, black, transparent);">
+        <!-- Nav area to add hyperlinks to other pages within the website -->
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a class="active" href="about.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
 
-    <!-- Use the header area for the website name or logo -->
-    <header class="align-center">
-        <h2>About Us</h2>
-    </header>
-
-    <!-- Use the main area to add the main content of the webpage -->
-    <main>
-        <h3>SPECIALITY OF PLUTO DRIVING SCHOOL</h3>
-        <dl>
-            <dt>
-                With experienced, friendly, courteous and yet professional staff, we really do make a difference.
-            </dt>
-            <dd>
-
-                <ul class="square_list_type">
-                    <li>Modern Vehicles</li>
-                    <li>Easy payment plan</li>
-                    <li>English or French courses</li>
-                    <li>Flexible theory/driving schedules</li>
-                    <li>Certified bilingual instructors</li>
-                    <li>Certified by AQTR</li>
+        <main>
+            <!-- Main area to add the main content of the webpage -->
+            <div class="align-center">
+                <h3 class="heading">Speciality of Pluto Driving School</h3>
+                <ul id="list1">
+                    <li>&#x1F697;&nbsp;Modern Vehicles&nbsp;&#x1F697;</li>
+                    <li>&#x1F4B0;&nbsp;Easy payment plan&nbsp;&#x1F4B0;</li>
+                    <li>&#x1F4D6;&nbsp;English or French courses&nbsp;&#x1F4D6;</li>
+                    <li>&#x231A;&nbsp;Flexible theory/driving schedules&nbsp;&#x231A;</li>
                 </ul>
-            </dd>
 
-            <h3>THE ISSUES WHICH THE PLUTO DRIVING SCHOOL CAN MITIGATE EASILY AS COMPARIED TO OTHER SCHOOLS ARE MENTIONED BELOW</h3>
-            <dl>
-                <dt>
+                <h3 class="heading" style="color: #9cc0d2;">Pluto Driving School Mitigate the following issues</h3>
+                <dl id="issues_list">
+                    <dt>
                     <Strong>Theoretical driving lessons</Strong>
                 </dt>
-                <dd>
-                    <p>
-                        These classes not only explain what you are going to do in the practical classes, also review the traffic signs and regulations of the law. When the course is nearing completion, schools provide support material for you to prepare for the exams you must
-                        pass to get your license.
-                    </p>
-                </dd>
-                <dt>
+                    <dd>
+                        <p>
+                            These classes not only explain what you are going to do in the practical classes, also review the traffic signs and regulations of the law.
+                        </p>
+                    </dd>
+                    <dt>
                     <Strong>The right position</Strong>
                 </dt>
-                <dd>
-                    <p>
-                        The first thing they teach you in a driving school is to sit porperly when driving. Although it sounds incredible, most people don’t know how to sit correctly to drive; moreover, you must align mirrors according to your posture in order to eliminate dangerous
-                        blind spots.
-                    </p>
-                </dd>
-                <dt>
+                    <dd>
+                        <p>
+                            The first thing they teach you in a driving school is to sit porperly when driving.
+                        </p>
+                    </dd>
+                    <dt>
                     <Strong>Driving with a conscience</Strong>
                 </dt>
-                <dd>
-                    <p>
-                        In a driving school you will not only be taught how to get around in a vehicle, you will be taught to drive with conscience, because they emphasize the importance of safety, respect
-                    </p>
-                </dd>
-            </dl>
+                    <dd>
+                        <p>
+                            In a driving school you will not only be taught how to get around in a vehicle, you will be taught to drive with conscience, because they emphasize the importance of safety,
+                            <br> respect for traffic laws and emphasize the commitment that driving represents.
+                        </p>
+                    </dd>
+                </dl>
 
-            <h2 id="help_students_heading">WAYS TO HELP OUR STUDENTS</h2>
-            <dl>
-                <dt>
-                    Pluto Driving School has Road Safety Education Program which aimed at the acquisition of the following competencies:
-                </dt>
-                <dd>
-                    <ul class="square_list_type">
-                        <li>To establish the profile of a safe, cooperative and responsible driver</li>
-                        <li>To handle the passenger vehicle</li>
-                        <li>To share the road</li>
-                        <li>To use the road network independently and responsibly</li>
-                    </ul>
-                </dd>
-            </dl>
+                <div class="blur-box">
+                    <h3 class="heading">HOW WE HELP OUR STUDENTS?</h3>
+                    <p style="color: #dcb0b0; font-size: x-large;">Pluto Driving School has Road Safety Education Program which aimed at the acquisition of the following competencies:</p>
+                    <div style="color: white;">
+                        <ul style="list-style-type: none;">
+                            <li class="round-border-list">To establish the profile of a safe, cooperative and responsible driver.</li><br>
+                            <li class="round-border-list">To handle the passenger vehicle.</li><br>
+                            <li class="round-border-list">To share the road.</li><br>
+                            <li class="round-border-list">To use the road network independently and responsibly.</li><br>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-    </main>
-
-    <!-- Use the footer area to add webpage footer content -->
-    <footer>
-        <hr> &copy; Copyright 2021, Pluto Driving School
-    </footer>
-
+        <!-- Footer area to add webpage footer content -->
+        <footer>
+            <hr> &copy; Copyright 2021, Pluto Driving School
+        </footer>
+    </div>
 </body>
 
 </html>
