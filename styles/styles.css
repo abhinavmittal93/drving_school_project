@@ -2,9 +2,7 @@
 
 nav ul {
     list-style-type: none;
-    /* margin: 0; */
     padding: 0;
-    /* background-color: #333; */
     width: 100%;
     height: auto;
     position: sticky;
@@ -66,7 +64,7 @@ footer {
 
 .bg {
     /* The image used */
-    background-image: url("../images/img3.jpg");
+    background-image: url("../images/img2.jpg");
     /* Full height */
     height: 100%;
     /* Center and scale the image nicely */
@@ -110,6 +108,7 @@ textarea {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    backdrop-filter: contrast(0.5);
 }
 
 .main {
@@ -126,16 +125,11 @@ textarea {
 }
 
 .blur-box {
-    border: 3px solid #f1f1f1 !important;
+    border: 0px solid #f1f1f1 !important;
     border-radius: 16px;
     padding: 40px;
+    font-family: monospace, sans-serif, "Times New Roman", Times;
+    font-size: 24px;
     backdrop-filter: blur(8px);
-}
-
-.border-blue {
-    border-color: #2196F3 !important;
-}
-
-.left-bar {
-    border-left: 6px solid #ccc !important;
+    color: white;
 }

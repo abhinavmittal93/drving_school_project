@@ -11,14 +11,44 @@
         #home_page_p1 {
             background: linear-gradient( 45deg, black, transparent);
             color: white;
-            font-size: x-large;
-            font-family: cursive;
+            font-size: 40px;
+            font-family: cursive, fantasy, monospace;
+        }
+        
+        #home_page_p2 {
+            background: linear-gradient( 45deg, white, transparent);
+            color: black;
+            font-style: italic;
+            font-family: fantasy, monospace;
+        }
+        /* On screens that are 774px or more, set the position, right and margin-top to the given values */
+        
+        @media screen and (min-width: 774px) {
+            #home_page_p1 {
+                position: absolute;
+                right: 0;
+                margin-bottom: 10%;
+            }
+            #home_page_p2 {
+                position: absolute;
+                right: 0;
+                margin-top: 10%;
+            }
+        }
+        
+        footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            /* background-color: grey; */
+            padding: 0px 0 0 0;
         }
     </style>
 </head>
 
 <body class="bg">
-    <!-- Use the nav area to add hyperlinks to other pages within the website -->
+    <!-- Nav area to add hyperlinks to other pages within the website -->
     <nav>
         <ul>
             <li><a class="active" href="home.html">Home</a></li>
@@ -28,18 +58,24 @@
         </ul>
     </nav>
 
-    <div style="height: 100vh;">
-        <!-- Use the main area to add the main content of the webpage -->
-        <main style="padding: 10%;">
+    <div>
+        <!-- Main area to add the main content of the webpage -->
+        <main style="padding: 1%;">
 
-            <p id="home_page_p1">Founded in 1997, Omega Driving School conveys services with plenty of experience and professionalism with a wide range of customer diversity and highly skilled certified instructors.
+            <div>
+                <h1><span id="home_page_p1">DRIVE SCHOOL & DRIVING LESSONS</span></h1>
+                <h2><span id="home_page_p2">Our mission is to improve DRIVING SAFETY ON ROAD</span></h2>
+            </div><br>
+
+            <div class="blur-box" style="margin-top: 15%;">
+                Founded in 1997, Pluto Driving School conveys services with plenty of experience and professionalism with a wide range of customer diversity and highly skilled certified instructors.
                 <br><br> Pluto driving school is committed to quality services where safety becomes the number one priority. It’s that quality of teaching from Pluto Driving School that ensures you are safe and confident on any road & circumstance. With
-                experienced, friendly, courteous and yet professional staff, we really do make a difference.</p>
-
+                experienced, friendly, courteous and yet professional staff, we really do make a difference.
+            </div>
         </main>
     </div>
 
-    <!-- Use the footer area to add webpage footer content -->
+    <!-- Footer area to add webpage footer content -->
     <footer style="color: white;">
         <hr> &copy; Copyright 2021, Pluto Driving School
     </footer>
