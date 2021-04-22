@@ -6,11 +6,71 @@
     <title>Our Services</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Style to create a fluid image */
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 1% 1% 1% 1%;
+            text-align: center;
+            font-family: arial;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        .card p,
+        .card h1 {
+            color: white;
+            font-family: sans-serif, "Times New Roman", Times;
+        }
+        
+        .card p {
+            font-size: 18px;
+        }
+        
+        .img {
+            box-shadow: .5em .5em .5em #404040;
+            margin: 1%;
+            text-align: center;
+            max-width: 100%
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        
+        @media only screen and (min-width: 600px) {
+            .card {
+                max-width: 30%;
+                float: left;
+                height: 36rem;
+            }
+        }
+        
+        #bg_services {
+            /* The image used */
+            background-image: url("../images/img15.jpg");
+            /* Full height */
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            backdrop-filter: blur(10px);
+        }
+        
+        #design-card {
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+
 </head>
 
-<body>
+<body id="bg_services">
 
-    <!-- Use the nav area to add hyperlinks to other pages within the website -->
+    <!-- nav area to add hyperlinks to other pages within the website -->
     <nav>
         <ul>
             <li><a href="home.html">Home</a></li>
@@ -20,18 +80,64 @@
         </ul>
     </nav>
 
-    <!-- Use the header area for the website name or logo -->
-    <header>
-    </header>
+    <!-- main area to add the main content of the webpage -->
+    <main id="design-card">
+        <div>
+            <div class="card">
+                <img src="../images/img6.jpg" alt="INTENSIVE COURSES">
+                <div class="image_desc">
+                    <h1>INTENSIVE COURSES</h1>
+                    <p>These are available for pupils wishing to fast track their lessons. These are usually spread over a short period of time with a driving test at the end of the course.</p>
+                </div>
+            </div>
 
-    <!-- Use the main area to add the main content of the webpage -->
-    <main>
+            <div class="card">
+                <img src="../images/img7.jpg" alt="TEACHING AIDS">
+                <div class="image_desc">
+                    <h1>TEACHING AIDS</h1>
+                    <p>To help pupils learn and understand the concept of driving. We have driving videos, manuals and a Rota Pad in car mechanical simulator to improve steering techniques.</p>
+                </div>
+            </div>
 
-        <p></p>
 
+            <div class="card">
+                <img src="../images/img8.jpg" alt="PRACTICAL TESTS">
+                <div class="image_desc">
+                    <h1>PRACTICAL TESTS</h1>
+                    <p>Advice on booking tests and procedures can be obtained from the instructor, on our useful information page or by contacting us.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div>
+            <div class="card">
+                <img src="../images/img9.jpg" alt="DOOR TO DOOR PICK UP">
+                <div class="image_desc">
+                    <h1>DOOR TO DOOR PICK UP</h1>
+                    <p>Pupils can arrange with the office or instructor to be picked up and dropped off from their home, or any other meeting point within an accessible radius.</p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="../images/img10.jpg" alt="ADVICE ON LICENCES">
+                <div class="image_desc">
+                    <h1>ADVICE ON LICENCES</h1>
+                    <p>Advice on foreign licences can be obtained from the instructor, on our useful information page or by contacting us.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../images/img11.jpg" alt="MOTORWAY LESSONS">
+                <div class="image_desc">
+                    <h1>MOTORWAY LESSONS</h1>
+                    <p>Motorway lessons are available seven days a week and can be conducted in the instructor or the pupils own car.</p>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <!-- Use the footer area to add webpage footer content -->
+    <!-- footer area to add webpage footer content -->
     <footer>
         <hr> &copy; Copyright 2021, Pluto Driving School
     </footer>
