@@ -42,11 +42,6 @@ nav ul li a:hover:not(.active) {
 
 /* Styles for navigation bar ends here */
 
-body {
-    height: 100%;
-    margin: 0;
-}
-
 .align-center {
     text-align: center;
 }
@@ -60,13 +55,16 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+    color: white;
 }
 
-.bg {
-    /* The image used */
-    background-image: url("../images/img2.jpg");
+
+/* styles for body, setting the position, height and size */
+
+body {
     /* Full height */
     height: 100%;
+    margin: 0;
     /* Center and scale the image nicely */
     background-position: center center;
     background-repeat: no-repeat;
@@ -97,18 +95,6 @@ textarea {
 
 .btn {
     background-color: #45a049;
-}
-
-.bg2 {
-    background: url("../images/img1.jpg")no-repeat;
-    /* Full height */
-    height: 100%;
-    /* Center and scale the image nicely */
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    backdrop-filter: contrast(0.5);
 }
 
 .main {

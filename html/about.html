@@ -8,6 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        #aboutus_body {
+            background: url("../images/img1.jpg")no-repeat;
+            /* Full height */
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            backdrop-filter: contrast(0.5);
+        }
+        
         .heading {
             font-family: cursive, times, "Times New Roman", "times-roman", georgia, serif;
             color: #ad3e3e;
@@ -17,10 +29,6 @@
             line-height: 44px;
             letter-spacing: -2px;
             font-weight: bold;
-        }
-        
-        footer {
-            color: white;
         }
         
         #list1 {
@@ -55,7 +63,7 @@
 
 </head>
 
-<body class="bg2">
+<body id="aboutus_body">
     <div style="background: linear-gradient( 45deg, black, transparent);">
         <!-- Nav area to add hyperlinks to other pages within the website -->
         <nav>
@@ -119,6 +127,7 @@
                         </ul>
                     </div>
                 </div>
+                <!-- blur-box div end -->
             </div>
         </main>
 
