@@ -1,15 +1,13 @@
-/* Styles for navigation bar starts here */
+/* This website is created by: Abhinav mittal, Manpreet Kaur, Samrithi, Aarti & Jobanjeet Kaur*/
 
+/* Styles for navigation bar starts here */
 nav ul {
     list-style-type: none;
     padding: 0;
     width: 100%;
     height: auto;
-    position: sticky;
     top: 0;
     overflow: auto;
-    /* Safari */
-    position: -webkit-sticky;
 }
 
 nav ul li a {
@@ -32,24 +30,27 @@ nav ul li a:hover:not(.active) {
     color: white;
 }
 
-@media screen and (max-width: 400px) {
+/* media query for browser window smaller than 600px, setting the nav bar in middle and vertically */
+@media screen and (max-width: 600px) {
     nav ul li a {
         text-align: center;
         float: none;
     }
 }
-
-
 /* Styles for navigation bar ends here */
 
+
+/* Created a class with property to align the text in center of the element */
 .align-center {
     text-align: center;
 }
 
+/* Created a class with property to change the shape of the bullet points to square */
 .square_list_type {
     list-style-type: square;
 }
 
+/* Styles for footer element, aligning the text in center and color to white */
 footer {
     left: 0;
     bottom: 0;
@@ -60,7 +61,6 @@ footer {
 
 
 /* styles for body, setting the position, height and size */
-
 body {
     /* Full height */
     height: 100%;
@@ -72,9 +72,8 @@ body {
     background-attachment: fixed;
 }
 
-input,
-select,
-textarea {
+/* Styles for input and textarea elements with properties such as padding, border style and margin */
+input, textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -84,6 +83,7 @@ textarea {
     resize: vertical;
 }
 
+/* Created a class for button element with properties such as background color, color and border style. */
 .btn {
     background-color: #4CAF50;
     color: white;
@@ -93,29 +93,13 @@ textarea {
     cursor: pointer;
 }
 
-.btn {
-    background-color: #45a049;
-}
-
-.main {
-    width: 50%;
-    background: rgba(0, 0, 0, .7);
-    color: #ffffff;
-    text-align: center;
-    padding: 50px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: cursive;
-}
-
+/* Created a class with properties such as color and border style and made the background blur a bit. */
 .blur-box {
     border: 0px solid #f1f1f1 !important;
     border-radius: 16px;
     padding: 40px;
     font-family: monospace, sans-serif, "Times New Roman", Times;
-    font-size: 24px;
+    font-size: 26px;
     backdrop-filter: blur(8px);
     color: white;
 }

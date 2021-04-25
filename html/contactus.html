@@ -1,11 +1,14 @@
 <!DOCTYPE html>
+<!-- This website is created by: Abhinav mittal, Manpreet Kaur, Samrithi, Aarti & Jobanjeet Kaur -->
 <html lang="en">
-
+<!-- head section starts from here -->
 <head>
     <meta charset="utf-8" />
     <title>Contact Us</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- styles are applied here specifically for this webpage elements -->
     <style>
         #contact_us_body {
             background-image: url('../images/img5.jpg');
@@ -24,15 +27,18 @@
         .outer_column {
             background: linear-gradient(45deg, lightgrey, transparent);
         }
+
+
         /* Clear floats after the columns */
-        
         .row:after {
             content: "";
             display: table;
             clear: both;
         }
-        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-        
+
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other, 
+        also make input tags of full screen width */
         @media screen and (max-width: 900px) {
             .column {
                 width: 100%;
@@ -51,7 +57,7 @@
         }
     </style>
 </head>
-
+<!-- body tag starts from here contain the main content of webpage -->
 <body id="contact_us_body">
 
     <!-- Use the nav area to add hyperlinks to other pages within the website -->
@@ -88,7 +94,7 @@
                             </span>
                             <span class="column">
                               <label for="lname">Last name:</label><br>
-                              <input type="text" id="lname" name="lname">
+                              <input type="text" id="lname" name="lname" required>
                             </span>
                             <span class="column">
                               <label for="email">Email:</label><br>
@@ -100,7 +106,7 @@
                             </span>
                             <span style="padding: 10px;">
                               <label for="query">Message:</label><br>
-                              <textarea style="margin-left: 10px; width: 82%;" rows="3" cols="23" required></textarea>
+                              <textarea id="query" name="query" style="margin-left: 10px; width: 82%;" rows="3" cols="23" required></textarea>
                             </span>
                             <span class="column">
                               <input class="btn" type="reset" value="Reset">
