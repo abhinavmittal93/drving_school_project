@@ -33,10 +33,21 @@
         }
         /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
         
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 900px) {
             .column {
                 width: 100%;
             }
+            input {
+                width: 100%;
+            }
+            .btn {
+                width: 48%;
+            }
+        }
+        
+        #map_img {
+            max-width: 100%;
+            max-height: 100%;
         }
     </style>
 </head>
@@ -63,9 +74,8 @@
         <div class="row">
             <div class="column outer_column align-center">
                 <h2>MAP & DIRECTIONS</h2>
-                <h2>CF Toronto Eaton Centre</h2>
                 <h2>220 Yonge St, Toronto, ON M5B 2H1</h2>
-                <img src="../images/address.jpg" alt="Google Map Location">
+                <img id="map_img" src="../images/address.jpg" alt="Google Map Location">
             </div>
             <div class="column outer_column">
                 <form>
@@ -106,7 +116,6 @@
             <h3><span title="Phone">&#9742;</span><b> <a style="color: white;text-decoration: none;" href="tel:+14372193341">+1(437) 219-3341</a></b></h3>
             <h3><span title="Email">&#128231;</span><b> <a style="color: white;text-decoration: none;" href="mailto:abhinavmittal93@gmail.com">abhinavmittal93@gmail.com</a></b></h3>
             &nbsp;
-        </div>
         </div>
     </main>
 
