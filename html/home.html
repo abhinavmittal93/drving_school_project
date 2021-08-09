@@ -5,6 +5,8 @@
 <head>
     <meta charset="utf-8" />
     <title>Pluto Driving School</title>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="../styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -79,13 +81,13 @@
                 <h2><span id="home_page_p2">Our mission is to improve DRIVING SAFETY ON ROAD</span></h2>
             </div><br>
 
-            <div class="blur-box" style="margin-top: 15%;">
+            <div class="blur-box" style="margin-top: 15%;" data-aos="fade-right">
                 Founded in 1997, Pluto Driving School conveys offerings with masses of revel in and professionalism with a huge variety of patron variety and incredibly professional licensed instructors.
                 <br><br>Pluto Driving School is devoted to nice offerings wherein protection will become the primary priority. It’s that nice of coaching from Pluto Driving School that guarantees you're secure and assured on any road & circumstance. With
                 experienced, friendly, courteous, and but expert staff, we truly do make a difference.
             </div>
             <br>
-            <div id="price_table">
+            <div id="price_table" data-aos="flip-left">
                 <table class="blur-box">
                     <caption>Pricing List</caption>
                     <tr>
@@ -106,6 +108,7 @@
                     </tr>
                 </table>
             </div>
+			
         </main>
     </div>
 
@@ -113,6 +116,13 @@
     <footer>
         <hr> &copy; Copyright 2021, Pluto Driving School
     </footer>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init({
+            offset:300,
+            duration: 1400
+        });
+        </script>
 
 </body>
 

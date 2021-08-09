@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- This website is created by: Abhinav mittal, Manpreet Kaur, Samrithi, Aarti & Jobanjeet Kaur -->
+<!-- This website is created by: Abhinav Mittal, Samridhi, Aarti & Navdeep Kaur -->
 <html lang="en">
 <!-- head section starts from here -->
 <head>
@@ -7,6 +7,8 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
 
     <!-- styles are applied here specifically for this webpage elements -->
     <style>
@@ -56,6 +58,8 @@
             max-height: 100%;
         }
     </style>
+
+    
 </head>
 <!-- body tag starts from here contain the main content of webpage -->
 <body id="contact_us_body">
@@ -67,6 +71,7 @@
             <li><a href="about.html">About Us</a></li>
             <li><a class="active" href="contactus.html">Contact Us</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="registration_form.html">Register</a></li>
         </ul>
     </nav>
 
@@ -79,22 +84,24 @@
     <main>
         <div class="row">
             <div class="column outer_column align-center">
-                <h2>MAP & DIRECTIONS</h2>
-                <h2>220 Yonge St, Toronto, ON M5B 2H1</h2>
-                <img id="map_img" src="../images/address.jpg" alt="Google Map Location">
+                <fieldset>
+                    <legend><b>MAP & DIRECTIONS</b></legend>
+                    <div id="googleMap" style="width:100%;height:400px"></div>
+                </fieldset>
+                
             </div>
             <div class="column outer_column">
-                <form>
+                <form method="POST" onsubmit="validateForm();">
                     <fieldset>
-                        <legend><b>Personalia:</b></legend>
+                        <legend class="align-center"><b>Personalia:</b></legend>
                         <div class="row">
                             <span class="column">
                               <label for="fname">First name:</label><br>
-                              <input type="text" id="fname" name="fname" required>
+                              <input type="text" id="fname" name="fname" minlength="2" maxlength="15" required>
                             </span>
                             <span class="column">
                               <label for="lname">Last name:</label><br>
-                              <input type="text" id="lname" name="lname" required>
+                              <input type="text" id="lname" name="lname" minlength="2" maxlength="20" required>
                             </span>
                             <span class="column">
                               <label for="email">Email:</label><br>
@@ -102,7 +109,7 @@
                             </span>
                             <span class="column">
                               <label for="contact">Contact number:</label><br>
-                              <input type="tel" id="contact" name="contact" maxlength="11">
+                              <input type="tel" id="contact" name="contact" maxlength="10">
                             </span>
                             <span style="padding: 10px;">
                               <label for="query">Message:</label><br>
@@ -121,6 +128,7 @@
             <h2><span title="Working Hours">&#128337;</span><b> 8:00 AM to 6:00 PM (Business Days)</b></h2>
             <h3><span title="Phone">&#9742;</span><b> <a style="color: white;text-decoration: none;" href="tel:+14372193341">+1(437) 219-3341</a></b></h3>
             <h3><span title="Email">&#128231;</span><b> <a style="color: white;text-decoration: none;" href="mailto:abhinavmittal93@gmail.com">abhinavmittal93@gmail.com</a></b></h3>
+            <h3 title="Address">220 Yonge St, Toronto, ON M5B 2H1</h3>
             &nbsp;
         </div>
     </main>
@@ -129,7 +137,29 @@
     <footer>
         <hr> &copy; Copyright 2021, Pluto Driving School
     </footer>
+    <script>
+        function myMap() {
+            var myPosition = new google.maps.LatLng(43.653611,-79.38006);
+            var mapProp = {
+                center:myPosition,
+                zoom:18,
+            };
+            var marker = new google.maps.Marker({
+                position:myPosition,
+                animation:google.maps.Animation.BOUNCE
+            });
 
+            var infowindow = new google.maps.InfoWindow({
+                content:"220 Yonge St, Toronto, ON M5B 2H1"
+            });
+
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            marker.setMap(map);
+            infowindow.open(map,marker);
+        }
+        
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZNwrzjTMh_Nyw5ntJth-lEhrFYnhC4mA&callback=myMap"></script>
 </body>
 
 </html>

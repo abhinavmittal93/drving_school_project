@@ -1,4 +1,4 @@
-/* This website is created by: Abhinav mittal, Manpreet Kaur, Samrithi, Aarti & Jobanjeet Kaur*/
+/* This website is created by: Abhinav Mittal, Samridhi, Aarti & Navdeep Kaur */
 
 /* Styles for navigation bar starts here */
 nav ul {
@@ -72,8 +72,8 @@ body {
     background-attachment: fixed;
 }
 
-/* Styles for input and textarea elements with properties such as padding, border style and margin */
-input, textarea {
+/* Styles for input, select and textarea elements with properties such as padding, border style and margin */
+input, textarea, select {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;

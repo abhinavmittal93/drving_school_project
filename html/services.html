@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- This website is created by: Abhinav mittal, Manpreet Kaur, Samrithi, Aarti & Jobanjeet Kaur -->
+<!-- This website is created by: Abhinav Mittal, Samridhi, Aarti & Navdeep Kaur -->
 <html lang="en">
 <!-- head section starts from here -->
 <head>
@@ -7,6 +7,63 @@
     <title>Our Services</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	$("#top").click( function(){
+
+		$("body").slideDown("slow");
+		});
+	});
+</script>
+<script>
+$(document).ready(function(){
+  $("#p1").hide();
+    $("#btn1").on("click", function(){
+        $("#p1").slideToggle(1000);
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#p2").hide();
+    $("#btn2").on("click", function(){
+        $("#p2").slideToggle(1000);
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#p3").hide();
+    $("#btn3").on("click", function(){
+        $("#p3").slideToggle(1000);
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#p4").hide();
+    $("#btn4").on("click", function(){
+        $("#p4").slideToggle(1000);
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#p5").hide();
+    $("#btn5").on("click", function(){
+        $("#p5").slideToggle(1000);
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#p6").hide();
+    $("#btn6").on("click", function(){
+        $("#p6").slideToggle(1000);
+  });
+});
+</script>
 
     <!-- styles are applied here specifically for this webpage elements -->
     <style>
@@ -15,7 +72,11 @@
             background-image: url("../images/img15.jpg");
             backdrop-filter: blur(10px);
         }
-        
+		a.three:link {color:#FFFFFF;}
+		a.three:visited {color:#FFFFFF;}
+		a.three:hover {background:#66ff66;}
+
+
         figure {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             margin: 1% 1% 1% 1%;
@@ -35,7 +96,7 @@
         }
         
         figure p {
-            font-size: 18px;
+            font-size: 17px;
         }
         
         .img {
@@ -58,6 +119,31 @@
             position: relative;
             overflow: hidden;
         }
+		
+		
+		#btn1,#btn2,#btn3,#btn4,#btn5,#btn6
+		{
+		  background-color: #4CAF50; /* Green */
+		  border: solid;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  border-radius: 12px;
+		  cursor: pointer;
+		  
+		}
+		
+		#p1,#p2,#p3,#p4,#p5,#p6{
+		width: 100%;
+		padding: 10px 0;
+		text-align: center;
+		background-color: grey;
+		margin-top: 20px;
+		  
+		}
     </style>
 
 </head>
@@ -71,6 +157,7 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="contactus.html">Contact Us</a></li>
             <li><a class="active" href="services.html">Services</a></li>
+            <li><a href="registration_form.html">Register</a></li>
         </ul>
     </nav>
 
@@ -80,16 +167,20 @@
             <figure>
                 <img src="../images/img6.jpg" alt="INTENSIVE COURSES">
                 <figcaption>
-                    <h1>INTENSIVE COURSES</h1>
-                    <p>These are available for students wishing to speedy tune their lessons. These are commonly unfold over a brief time period with a driving test at the end of the course.</p>
+				<br>
+				
+                    <button id="btn1">INTENSIVE COURSES</button>
+                    <p id="p1" >These are available for students wishing to speedy tune their lessons. These are commonly unfold over a brief time period with a driving test at the end of the course.</p>
                 </figcaption>
             </figure>
 
             <figure>
                 <img src="../images/img7.jpg" alt="TEACHING AIDS">
                 <figcaption>
-                    <h1>TEACHING AIDS</h1>
-                    <p>To assist students to learn and apprehend the idea of using. We have driving videos, manuals, and a Rota Pad in the car mechanical simulator to enhance steering techniques.</p>
+				<br>
+				
+                    <button id="btn2">TEACHING AIDS</button>
+                    <p id="p2">Assisting to learn and apprehend the idea of using.videos, manuals, and a Rota Pad in the car mechanical simulator to enhance steering techniques.</p>
                 </figcaption>
             </figure>
 
@@ -97,8 +188,9 @@
             <figure>
                 <img src="../images/img8.jpg" alt="PRACTICAL TESTS">
                 <figcaption>
-                    <h1>PRACTICAL TESTS</h1>
-                    <p>Advice on booking tests and procedures can be obtained from the instructor, on our helpful information page, or by contacting us.</p>
+				<br>
+                    <button id="btn3">PRACTICAL TESTS</button>
+                    <p id="p3">Advice on booking tests and procedures can be obtained from the instructor, on our helpful information page, or by contacting us. Helping them by assisting in right direction.</p>
                 </figcaption>
             </figure>
         </div>
@@ -107,8 +199,9 @@
             <figure>
                 <img src="../images/img9.jpg" alt="DOOR TO DOOR PICK UP">
                 <figcaption>
-                    <h1>DOOR TO DOOR PICK UP</h1>
-                    <p>Students can arrange to pick them up with the office or instructor and drop them at home or another meeting place within their available radius.</p>
+				<br>
+                    <button id="btn4">DOOR TO DOOR PICK UP</button>
+                    <p id="p4">Facility to pick learners up from the office  and drop them at home or another meeting place within their available radius.</p>
                 </figcaption>
             </figure>
 
@@ -116,24 +209,30 @@
             <figure>
                 <img src="../images/img10.jpg" alt="ADVICE ON LICENCES">
                 <figcaption>
-                    <h1>ADVICE ON LICENCES</h1>
-                    <p>Advice on foreign licences can be obtained from the instructor, on our useful information page or by contacting us.</p>
+				<br>
+                    <button id="btn5">ADVICE ON LICENCES</button>
+                    <p id="p5">Advice on foreign licences can be obtained from the instructor, on our useful information page or by contacting us.</p>
                 </figcaption>
             </figure>
 
             <figure>
                 <img src="../images/img11.jpg" alt="MOTORWAY LESSONS">
                 <figcaption>
-                    <h1>MOTORWAY LESSONS</h1>
-                    <p>Motorway lessons are available seven days a week and can be conducted in the instructor or the pupils own car.</p>
+				<br>
+                    <button id="btn6">MOTORWAY LESSONS</button>
+                    <p id="p6">Motorway lessons are available seven days a week and can be conducted in the instructor or the pupils own car.</p>
                 </figcaption>
             </figure>
+			
         </div>
+		
     </main>
 
     <!-- footer area to add webpage footer content -->
     <footer>
-        <hr> &copy; Copyright 2021, Pluto Driving School
+		
+        <hr> &copy; Copyright 2021, Pluto Driving School<br>
+		<a class="three" href='#top'>Go To Top</a>
     </footer>
 
 </body>

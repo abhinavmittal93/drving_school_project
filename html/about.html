@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- This website is created by: Abhinav mittal, Manpreet Kaur, Samrithi, Aarti & Jobanjeet Kaur -->
+<!-- This website is created by: Abhinav Mittal, Samridhi, Aarti & Navdeep Kaur -->
 <html lang="en">
 <!-- head section starts from here -->
 <head>
@@ -7,6 +7,7 @@
     <title>About us</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- styles are applied here specifically for this webpage elements -->
     <style>
@@ -75,19 +76,22 @@
                 <li><a class="active" href="about.html">About Us</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
                 <li><a href="services.html">Services</a></li>
+                <li><a href="registration_form.html">Register</a></li>
             </ul>
         </nav>
 
         <main>
             <!-- Main area to add the main content of the webpage -->
             <div class="align-center">
-                <h3 class="heading">Speciality of Pluto Driving School</h3>
-                <ul id="list1">
-                    <li>&#x1F697;&nbsp;Modern Vehicles&nbsp;&#x1F697;</li>
-                    <li>&#x1F4B0;&nbsp;Easy payment plan&nbsp;&#x1F4B0;</li>
-                    <li>&#x1F4D6;&nbsp;English or French courses&nbsp;&#x1F4D6;</li>
-                    <li>&#x231A;&nbsp;Flexible theory/driving schedules&nbsp;&#x231A;</li>
-                </ul>
+              <div class="box" id="box">
+                  <h3 class="heading sentence title">Speciality of Pluto Driving School</h3>
+                  <ul id="list1">
+                      <li >&#x1F697;&nbsp;<span class="sentence subtitle">Modern Vehicles</span>&nbsp;&#x1F697;</li>
+                      <li>&#x1F4B0;&nbsp;<span class="sentence subtitle">Easy payment plan</span>&nbsp;&#x1F4B0;</li>
+                      <li>&#x1F4D6;&nbsp;<span class="sentence subtitle">English or French courses</span>&nbsp;&#x1F4D6;</li>
+                      <li>&#x231A;&nbsp;<span class="sentence subtitle">Flexible theory/driving schedules</span>&nbsp;&#x231A;</li>
+                  </ul>
+              </div>
 
                 <h3 class="heading" style="color: #9cc0d2;">Pluto Driving School Mitigate the following issues</h3>
                 <dl id="issues_list">
@@ -119,14 +123,14 @@
                 </dl>
 
                 <div class="blur-box">
-                    <h3 class="heading">HOW WE HELP OUR STUDENTS?</h3>
-                    <p style="color: #dcb0b0; font-size: x-large;">Pluto Driving School has a Road Safety Education Program which aimed at the acquisition of the following competencies:</p>
+                    <h3 class="heading" id="text1" style="position:absolute;left: 0;">HOW WE HELP OUR STUDENTS?</h3>
+                    <p style="color: #dcb0b0; font-size: x-large;margin-top: 83px">Pluto Driving School has a Road Safety Education Program which aimed at the acquisition of the following competencies:</p>
                     <div style="color: white;">
                         <ul style="list-style-type: none;">
-                            <li class="round-border-list">To set the account of a guarded, collaborative and accounatble driver.</li>
-                            <li class="round-border-list">To handle the passenger vehicle.</li>
-                            <li class="round-border-list">To share the road.</li>
-                            <li class="round-border-list">To utilize independently all of the things like road netwoks.</li>
+                            <li class="round-border-list" style="height: 32px" ><span id="text2" style="position:absolute;left: 0;">To set the account of a guarded, collaborative and accounatble driver.</span></li>
+                            <li class="round-border-list" style="height: 32px"><span id="textright1" style="position:absolute;right: 0">To handle the passenger vehicle.</span></li>
+                            <li class="round-border-list" style="height: 32px"><span id="tlft2" style="position:absolute;left: 0;">To share the road.</span></li>
+                            <li class="round-border-list" style="height: 32px"><span id="textright2" style="position:absolute;right: 0">To utilize independently all of the things like road netwoks.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -139,6 +143,126 @@
             <hr> &copy; Copyright 2021, Pluto Driving School
         </footer>
     </div>
-</body>
 
+</body>
+<style>
+    /*div {*/
+    /*    position:absolute;*/
+    /*}*/
+    .sentence span {
+        opacity: 0;
+        position: relative;
+        display: inline-block;
+    }
+    .sentence span.active {
+        animation: bounceUp 600ms ease 0ms 1 normal both;
+    }
+    @keyframes bounceUp {
+        0% {
+            transform: translate3d(0px, 0px, 0px);
+            opacity: 0;
+        }
+        50% {
+            transform: translate3d(0px, -50px, 0px);
+            opacity: 0.7;
+        }
+        80% {
+            transform: translate3d(0px, 20px, 0px);
+            opacity: 1;
+        }
+        100% {
+            transform: translate3d(0px, 0px, 0px);
+            opacity: 1;
+        }
+    }
+</style>
+
+<script>
+
+    //
+    function setUpCharacters() {
+        var $sentences = $('.sentence');
+
+        // Run for each sentence
+        $sentences.each(function() {
+            var $sentence = $(this);
+            var newContent = '';
+
+            // Go through all characters of the sentence
+            for (i = 0; i < $sentence.text().length; i++) {
+                var substring = $sentence.text().substr(i, 1);
+
+                // If we have a character, wrap it
+                if (substring != " ") {
+                    newContent += '<span>' + substring + '</span>';
+                } else {
+                    newContent += substring;
+                }
+            }
+
+            // Replace content
+            $sentence.html(newContent);
+        });
+    }
+
+    setUpCharacters();
+    // Go through a sentence and trigger activate state
+    function triggerCharacters() {
+        var sentenceCounter = 0;
+        var sentenceDelay = 500;
+
+        $('.sentence').each(function() {
+            var $sentence = $(this);
+
+            // Trigger for each sentence
+            setTimeout(function() {
+                var $spans = $sentence.find('span');
+                var spanCounter = 0;
+                var spanDelay = 15;
+
+                // Loop through all spans and activate
+                $spans.each(function() {
+                    var $span = $(this);
+
+                    // Trigger a timeout so each span is offset
+                    setTimeout(function() {
+                        $span.toggleClass('active');
+                    }, (spanCounter * spanDelay));
+
+                    spanCounter++;
+                });
+            }, (sentenceCounter * sentenceDelay));
+
+            sentenceCounter++;
+        });
+    }
+
+
+    $(document).ready(function(){
+        $('#box').fadeOut(1000, function(){
+            $('#btnFadeOut');
+            $('#box').slideDown(5000);
+            setTimeout(triggerCharacters, 2000)
+
+        });
+
+    });
+
+    $('#box').hover(function (){
+        setTimeout(triggerCharacters, 2000)
+    });
+ $('.blur-box').hover(function (){
+     $("#text1").animate({left: '21%'}, 2000, "linear");
+     $("#text2").animate({left: '21%'}, 2000, "linear");
+     $("#tlft2").animate({left: '41%'}, 2000, "linear");
+
+
+     $("#textright1").animate({left: '-8%'}, 2000, "linear");
+     $("#textright2").animate({left: '-6%'}, 2000, "linear");
+    });
+
+
+
+
+</script>
 </html>

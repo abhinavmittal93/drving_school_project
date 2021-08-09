@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!-- This website is created by: Abhinav Mittal, Samridhi, Aarti & Navdeep Kaur -->
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+
+    <style>
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        html{
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* CSS which you need for blurred box */
+        body{
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: top;
+            background-image:url(http://bit.ly/2gPLxZ4);
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica;
+            letter-spacing: 0.02em;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased; 
+        }
+
+        .blurred-box{
+            position: relative;
+            width: 70%;
+            transform: translate(calc(50vw - 50%));
+            background: inherit;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .blurred-box:after{
+            content: '';
+            background: inherit; 
+            position: absolute;
+            left: -25px;
+            right: 0;
+            top: -25px;  
+            bottom: 0;
+            box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+            filter: blur(10px);
+        }
+
+
+        /* Form which you dont need */
+        .user-login-box{
+            position: relative;
+            margin-top: 50px;
+            text-align: center;
+            z-index: 1;
+        }
+        .user-login-box > *{
+            display: grid;
+        }
+
+        .user-name{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        input, select {
+            opacity: 0.4;
+            border: 0;
+        }
+
+        input[type = text], input[type = email], input[type = password], input[type = number], select {
+            width: inherit;
+        }
+    </style>
+
+    <script>
+        const only_letters_regex = /^[A-Za-z]+$/;
+        const only_numerics_regex = /^\d*$/;
+        const email_pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+
+        function validateForm(e) {
+
+            var isUserIdValid = userid_validation($("#user_id"), 5, 12);
+            if(!isUserIdValid) {
+                e.preventDefault();
+                return false;
+            }
+
+            var isPasswordValid = password_validation($("#password"), 7, 12);
+            if(!isPasswordValid) {
+                e.preventDefault();
+                return false;
+            }
+
+            var isUserNameValid = username_validation($('#user_name'));
+            if(!isUserNameValid) {
+                e.preventDefault();
+                return false;
+            }
+
+            var isZipCodeValid = zipcode_validation($('#zip_code'));
+            if(!isZipCodeValid) {
+                e.preventDefault();
+                return false;
+            }
+
+            var isEmailValid = email_validation($('#email'));
+            if(!isEmailValid) {
+                e.preventDefault();
+                return false;
+            }
+
+            var isLanguageChecked = language_validation();
+            if(!isLanguageChecked) {
+                e.preventDefault();
+                return false;
+            }
+
+            alert('Form submitted successfully');
+
+        }
+
+        function userid_validation(uid,minlength,maxlength) {
+            var uid_len = uid.val().trim().length;
+            if (uid_len == 0 || uid_len < minlength || uid_len > maxlength)
+            {
+                alert("User Id should not be empty / length be between "+minlength+" to "+maxlength);
+                uid.focus();
+                return false;
+            }
+            return true;
+        }
+
+        function password_validation(password,minlength,maxlength) {
+            var password_len = password.val().trim().length;
+            if (password_len == 0 || password_len < minlength || password_len > maxlength)
+            {
+                alert("Password should not be empty / length be between "+minlength+" to "+maxlength);
+                password.focus();
+                return false;
+            }
+            return true;
+        }
+
+        function username_validation(user_name) {
+            var user_name_len = user_name.val().trim().length;
+            if (user_name_len == 0 || !user_name.val().match(only_letters_regex))
+            {
+                alert("Name should not be empty / only have alphabets.");
+                user_name.focus();
+                return false;
+            }
+            return true;
+        }
+
+        function zipcode_validation(zip_code) {
+            var zip_code_len = zip_code.val().trim().length;
+            if (zip_code_len == 0 || !zip_code.val().match(only_numerics_regex))
+            {
+                alert("ZIP Code should not be empty / only have numerics.");
+                zip_code.focus();
+                return false;
+            }
+            return true;
+        }
+
+        function email_validation(email) {
+            var email_len = email.val().trim().length;
+            if (email_len == 0 || !email_pattern.test(email.val()))
+            {
+                alert("Email should not be empty / valid email address.");
+                email.focus();
+                return false;
+            }
+            return true;
+        }
+
+
+        function language_validation() {
+            if(!$('#english').is(":checked") && !$('#non_english').is(":checked")) {
+                alert('Please select a language.');
+                return false;
+            }
+            return true;
+        }
+
+        
+    </script>
+
+</head>
+<body>
+
+    <!-- Use the nav area to add hyperlinks to other pages within the website -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a class="active" href="registration_form.html">Register</a></li>
+        </ul>
+    </nav>
+    <div class="blurred-box" style="color: white;">
+        <div class="user-login-box">
+            <form onsubmit="validateForm(event)">
+                <div>
+                    <span style="width: 50%; float: left;">
+                        <label>User ID:</label>
+                        <input type="text" id="user_id" name="user_id" minlength="5" maxlength="12" required />
+                    </span>
+                    
+                    <span style="width: 50%; float: right;">
+                        <label>Password:</label>
+                        <input type="password" id="password" name="password" minlength="7" maxlength="12" required />
+                    </span>
+                </div>
+                <br>
+                <div>
+                    <span style="width: 50%; float: left;">
+                        <label>Name:</label>
+                        <input type="text" id="user_name" name="user_name" required />
+                    </span>
+                
+                    <span style="width: 50%; float: right;">
+                        <label>Address:</label>
+                        <input type="text" id="address" name="address" />
+                    </span>
+                </div>
+                <br>
+                <div>
+                    <span style="width: 50%; float: left;">
+                        <label>Country:</label>
+                        <select id="country" name="country" required>
+                            <option value="">Select</option>
+                            <option value="INDIA">India</option>
+                            <option value="CANADA">Canada</option>
+                        </select>
+                    </span>
+
+                    <span style="width: 50%; float: right;">
+                        <label>ZIP Code:</label>
+                        <input type="number" id="zip_code" name="zip_code" required />
+                    </span>
+                </div>
+                <br>
+                <div>
+                    <span style="width: 50%; float: left;">
+                        <label>Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </span>
+                </div>
+                <br>
+                <div>
+                    <span style="width: 50%; float: left;">
+                        <label>Sex:</label>
+                        <input type="radio" id="male" name="sex" value="M" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="sex" value="F" required>
+                        <label for="female">Female</label>
+                    </span>
+                </div>
+                <br>
+                <div>
+                    <span style="width: 50%; float: left;">
+                        <label>Language:</label>
+                        <input type="checkbox" id="english" name="language">
+                        <label for="english">English</label>
+                        <input type="checkbox" id="non_english" name="language">
+                        <label for="non_english">Non English</label>
+                    </span>
+                </div>
+                <br>
+                <div>
+                    <button class="btn" type="submit" style="width: 10%;">Submit</button>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>
