@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- This website is created by: Abhinav Mittal, Samridhi, Aarti & Navdeep Kaur -->
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>Login Form</title>
+
+    <style>
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        html{
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* CSS which you need for blurred box */
+        body{
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: top;
+            background-image:url(http://bit.ly/2gPLxZ4);
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica;
+            letter-spacing: 0.02em;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased; 
+        }
+
+        .blurred-box{
+            position: relative;
+            width: 70%;
+            transform: translate(calc(50vw - 50%));
+            background: inherit;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .blurred-box:after{
+            content: '';
+            background: inherit; 
+            position: absolute;
+            left: -25px;
+            right: 0;
+            top: -25px;  
+            bottom: 0;
+            box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+            filter: blur(10px);
+        }
+
+
+        /* Form which you dont need */
+        .user-login-box{
+            position: relative;
+            margin-top: 50px;
+            text-align: center;
+            z-index: 1;
+        }
+        .user-login-box > *{
+            display: grid;
+        }
+
+        .user-name{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        input, select {
+            opacity: 0.4;
+            border: 0;
+        }
+
+        input[type = text], input[type = email], input[type = password], input[type = number], select {
+            width: inherit;
+        }
+    </style>
+
+    <script>
+        const only_letters_regex = /^[A-Za-z]+$/;
+        const only_numerics_regex = /^\d*$/;
+        const email_pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+
+        function validateForm(e) {
+
+            var isEmailValid = email_validation($('#email'));
+            if(!isEmailValid) {
+                e.preventDefault();
+                return false;
+            }
+
+            var isPasswordValid = password_validation($("#password"), 7, 12);
+            if(!isPasswordValid) {
+                e.preventDefault();
+                return false;
+            }
+
+            if($('#email').val() == 'abhinavmittal93@gmail.com' && $("#password").val() == 'abhinav1234') {
+                alert('You have logged in successfully.');
+            } else {
+                alert('Username or Password is wrong. Please try again.');
+            }
+        }
+
+        function password_validation(password,minlength,maxlength) {
+            var password_len = password.val().trim().length;
+            if (password_len == 0 || password_len < minlength || password_len > maxlength)
+            {
+                alert("Password should not be empty / length be between "+minlength+" to "+maxlength);
+                password.focus();
+                return false;
+            }
+            return true;
+        }
+
+        function email_validation(email) {
+            var email_len = email.val().trim().length;
+            if (email_len == 0 || !email_pattern.test(email.val()))
+            {
+                alert("Email should not be empty / valid email address.");
+                email.focus();
+                return false;
+            }
+            return true;
+        }
+
+        
+    </script>
+
+</head>
+<body>
+
+    <!-- Use the nav area to add hyperlinks to other pages within the website -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="registration_form.html">Register</a></li>
+            <li><a class="active" href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="blurred-box" style="color: white;">
+        <div class="user-login-box">
+            <form onsubmit="validateForm(event)">
+                <div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Email" required />
+                    </div>
+                    <div>
+                        <input type="password" id="password" name="password" minlength="7" maxlength="12" placeholder="Password" required />
+                    </div>
+                </div>
+                <div>
+                    <button class="btn" type="submit" style="width: 10%;">Login</button>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>
