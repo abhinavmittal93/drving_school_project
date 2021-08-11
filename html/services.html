@@ -10,59 +10,35 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
 	$(document).ready(function(){
-	$("#top").click( function(){
+        
 
-		$("body").slideDown("slow");
-		});
-	});
-</script>
-<script>
-$(document).ready(function(){
-  $("#p1").hide();
-    $("#btn1").on("click", function(){
-        $("#p1").slideToggle(1000);
-  });
-});
-</script>
-<script>
-$(document).ready(function(){
-  $("#p2").hide();
-    $("#btn2").on("click", function(){
-        $("#p2").slideToggle(1000);
-  });
-});
-</script>
-<script>
-$(document).ready(function(){
-  $("#p3").hide();
-    $("#btn3").on("click", function(){
-        $("#p3").slideToggle(1000);
-  });
-});
-</script>
-<script>
-$(document).ready(function(){
-  $("#p4").hide();
-    $("#btn4").on("click", function(){
-        $("#p4").slideToggle(1000);
-  });
-});
-</script>
-<script>
-$(document).ready(function(){
-  $("#p5").hide();
-    $("#btn5").on("click", function(){
-        $("#p5").slideToggle(1000);
-  });
-});
-</script>
-<script>
-$(document).ready(function(){
-  $("#p6").hide();
-    $("#btn6").on("click", function(){
-        $("#p6").slideToggle(1000);
-  });
-});
+        $("#p1, #p2, #p3, #p4, #p5, #p6").hide();
+
+        $("#btn1").on("click", function(){
+            $("#p1").slideToggle(1000);
+        });
+
+        $("#btn2").on("click", function(){
+            $("#p2").slideToggle(1000);
+        });
+
+        $("#btn3").on("click", function(){
+            $("#p3").slideToggle(1000);
+        });
+
+        $("#btn4").on("click", function(){
+            $("#p4").slideToggle(1000);
+        });
+
+        $("#btn5").on("click", function(){
+            $("#p5").slideToggle(1000);
+        });
+
+        $("#btn6").on("click", function(){
+            $("#p6").slideToggle(1000);
+        });
+
+    });
 </script>
 
     <!-- styles are applied here specifically for this webpage elements -->
@@ -231,7 +207,6 @@ $(document).ready(function(){
 
     <!-- footer area to add webpage footer content -->
     <footer>
-		
         <hr> &copy; Copyright 2021, Pluto Driving School<br>
 		<a class="three" href='#top'>Go To Top</a>
     </footer>
