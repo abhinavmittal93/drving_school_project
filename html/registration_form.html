@@ -83,6 +83,15 @@
         input[type = text], input[type = email], input[type = password], input[type = number], select {
             width: inherit;
         }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        
+        @media only screen and (max-width: 720px) {
+            .user-login-box span {
+                width: 100% !Important;
+                float: left !Important;
+            }
+        }
     </style>
 
     <script>
@@ -284,7 +293,7 @@
                 </div>
                 <br>
                 <div>
-                    <button class="btn" type="submit" style="width: 10%;">Submit</button>
+                    <button class="btn" type="submit" style="width: fit-content;">Submit</button>
                 </div>
                 <br>
                 <div>Already Registered? <a href="login.html" style="color: blue;">Log In</a></div>
